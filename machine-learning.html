@@ -275,41 +275,46 @@ Notebook includes set-based similarity functions, cluster visualisations, and in
 
 <h2>Unit 6 – Clustering with Python</h2>
 
-<h4>🧠 Summary of Learning</h4>
-<p>
-This unit applied the K-Means clustering algorithm using Scikit-Learn on real-life datasets. We explored the use of clustering to reveal patterns in unlabelled data and interpreted clusters through visualisation and inertia/silhouette metrics.
-</p>
+<h4>Summary of Learning</h4>
+<p>This week extended the foundational concepts of clustering by shifting from theory to implementation. Building on the conceptual grounding from Unit 5, we applied the K-Means algorithm to real-world datasets using <code>scikit-learn</code>, one of Python’s most widely-used machine learning libraries. The emphasis was on understanding how to prepare data, select appropriate values of <code>K</code>, and interpret clustering results in the context of pattern discovery and segmentation. We also explored the practical implications of distance-based clustering on multidimensional data.</p>
 
-<h4>📁 Artefact</h4>
-<p>
-Created a Jupyter Notebook clustering customer data using K-Means. Included elbow plots and cluster interpretation.  
-<a href="https://github.com/your-username/ml-eportfolio/blob/main/unit6_kmeans.ipynb" target="_blank">View on GitHub</a>
-</p>
-
-<h4>🪞 Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
-<p>
-<strong>WHAT:</strong> I applied clustering on retail data and evaluated the optimal number of clusters.<br />
-<strong>SO WHAT:</strong> It helped me see how unsupervised methods can expose structure and user behaviour.<br />
-<strong>NOW WHAT:</strong> I aim to explore clustering evaluation in more depth, comparing DBSCAN and GMM models.
-</p>
-
-<h4>🤝 Collaboration</h4>
-<p>
-We discussed differences in cluster interpretation. I presented the elbow method and led our visual validation.
-</p>
-
-<h4>📸 Evidence</h4>
-<p>
-Elbow chart, cluster scatter plot and silhouette score visual saved in appendix and GitHub.
-</p>
-
-<h4>🛠️ Skills & Competencies</h4>
+<h4>Key Concepts Covered</h4>
 <ul>
-  <li>Used K-Means for customer segmentation</li>
-  <li>Evaluated cluster quality using silhouette score</li>
+  <li>Understanding K-Means clustering and its assumptions</li>
+  <li>Using scikit-learn for unsupervised learning tasks</li>
+  <li>Data preprocessing and feature selection for clustering</li>
+  <li>Evaluating clusters using visualisation and label comparison</li>
+</ul>
+
+<h4>Formative Activities</h4>
+<p>We explored three main tasks across different datasets:</p>
+<ol>
+  <li><strong>Iris Dataset:</strong> We used <code>K=3</code> to segment the dataset and compared the resulting clusters against actual species labels to assess clustering effectiveness.</li>
+  <li><strong>Wine Dataset:</strong> Again using <code>K=3</code>, we tested how well the algorithm could recover known wine classes based solely on numerical features.</li>
+  <li><strong>WeatherAUS Dataset:</strong> We experimented with values from <code>K=2</code> to <code>K=6</code> and visualised the groupings using 2D scatter plots to observe structure and overlap between climate patterns.</li>
+</ol>
+
+<h4>Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<p><strong>WHAT:</strong> I learned how K-Means functions as an unsupervised technique, grouping data points by minimising intra-cluster variance. I applied this understanding by experimenting with real datasets of varying structure and scale.</p>
+<p><strong>SO WHAT:</strong> This practical experience clarified the importance of choosing the right features and scaling techniques prior to clustering. It also revealed how cluster interpretability can be challenging when labels are not directly observable.</p>
+<p><strong>NOW WHAT:</strong> I plan to extend this learning by applying clustering techniques to customer segmentation and anomaly detection in larger business-oriented datasets. Additionally, I will explore other clustering approaches such as DBSCAN or hierarchical clustering for comparison.</p>
+
+<h4>Collaboration</h4>
+<p>I contributed to the team project by writing the introduction for our K-Means analysis report. Our discussions focused on choosing the right number of clusters and validating our results against known labels. Peer insights helped refine our preprocessing steps and enhance the overall quality of the clustering output.</p>
+
+<h4>Evidence</h4>
+<p>GitHub repository with notebook submissions: <a href="https://github.com/Jasim766/jasim766.github.io/blob/main/Unit06%20K-Means%20demo%20notebook.ipynb" target="_blank">https://github.com/Jasim766/jasim766.github.io/blob/main/unit6_kmeans.ipynb</a>. This includes preprocessing routines, KMeans implementation, evaluation metrics, and visual output for all three datasets.</p>
+
+<h4>Skills & Competencies</h4>
+<ul>
+  <li>Application of K-Means clustering in real-world scenarios</li>
+  <li>Preprocessing large datasets for unsupervised learning</li>
+  <li>Evaluation of clustering outcomes using plots and label matching</li>
+  <li>Using scikit-learn tools effectively for model development</li>
 </ul>
 
 <hr />
+
 
 
 <h2>Unit 7 – Introduction to Artificial Neural Networks</h2>
