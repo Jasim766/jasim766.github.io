@@ -467,119 +467,123 @@ In our group discussion, we compared model prediction outcomes for different tes
 
 <h2>Unit 10 – Natural Language Processing (NLP)</h2>
 
-<h4>🧠 Summary of Learning</h4>
+<h4>Summary of Learning</h4>
 <p>
-This unit introduced transformer-based NLP models (BERT, GPT, T5) and their role in text processing, summarisation, and generation. We explored evaluation metrics such as BLEU and ROUGE, and discussed the influence of self-supervised learning in scaling NLP applications.
+This unit explored the foundations and advancements in Natural Language Processing (NLP), a field that bridges linguistics and machine learning. We traced the evolution from early rule-based systems to the introduction of deep learning and transformer-based architectures such as BERT, GPT, and T5. These technologies have transformed how machines understand and generate human language, with real-world applications including chatbots, summarisation, search engines, and automated translation.
 </p>
 
-<h4>📁 Artefact</h4>
+<h4>Artefact</h4>
 <p>
-Fine-tuned a pretrained BERT model for sentiment classification. Evaluated performance using F1-score and confusion matrix.  
-<a href="https://github.com/your-username/ml-eportfolio/blob/main/unit10_nlp_transformers.ipynb" target="_blank">View on GitHub</a>
+The artefact for this unit was a series of activities focused on understanding the impact of transformer architectures and their evaluation. Key metrics such as BLEU, ROUGE, and perplexity were examined for assessing model output. While we did not run specific notebooks, I explored NLP evaluation using public datasets and APIs, adjusting parameters to observe changes in output fluency and coherence.
 </p>
 
-<h4>🪞 Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<h4>Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<p><strong>WHAT:</strong> I developed an understanding of how transformers like BERT and GPT use self-attention mechanisms to generate contextual embeddings of language.</p>
+<p><strong>SO WHAT:</strong> This allowed me to appreciate how transformer models outperform traditional sequence-based models like LSTMs, especially in tasks requiring contextual understanding. I also learned how essential evaluation metrics are in determining output quality.</p>
+<p><strong>NOW WHAT:</strong> I plan to apply transfer learning using HuggingFace transformers in future NLP projects. I also aim to explore fine-tuning and hyperparameter optimisation to improve model generalisation across tasks such as classification, summarisation, and QA.</p>
+
+<h4>Collaboration</h4>
 <p>
-<strong>WHAT:</strong> I applied transfer learning in NLP using HuggingFace’s `transformers` library.<br />
-<strong>SO WHAT:</strong> This showed the impact of pretraining and contextual embeddings.<br />
-<strong>NOW WHAT:</strong> I aim to evaluate larger models like T5 and experiment with summarisation and Q&A pipelines.
+During our team discussions, we analysed transformer model outputs and compared them to baseline models across different text datasets. This peer review helped identify where models produced hallucinated outputs or lacked syntactic fluency. The seminar included discussions on MLOps best practices for monitoring NLP pipelines and managing model drift in production environments.
 </p>
 
-<h4>🤝 Collaboration</h4>
+<h4>Evidence</h4>
 <p>
-Collaborated on fine-tuning datasets and tokenizer choices. Exchanged feedback on performance metrics and label imbalance.
+Although there was no specific Jupyter notebook required for this week, I experimented with BERT-based summarisation using HuggingFace and evaluated summaries using ROUGE-L and BLEU scores. 
 </p>
 
-<h4>📸 Evidence</h4>
-<p>
-Confusion matrix, tokenizer output, and training log screenshots available in appendix.
-</p>
-
-<h4>🛠️ Skills & Competencies</h4>
+<h4>Skills & Competencies</h4>
 <ul>
-  <li>Applied BERT for sentiment classification</li>
-  <li>Evaluated NLP models using precision, recall, and BLEU score</li>
+  <li>Understanding of Transformer-based models (BERT, GPT, T5)</li>
+  <li>Application of BLEU, ROUGE, and perplexity in NLP evaluation</li>
+  <li>Introduction to MLOps concepts in the NLP lifecycle</li>
+  <li>Hyperparameter tuning and transfer learning in NLP tasks</li>
 </ul>
 
 <hr />
+
 
 
 <h2>Unit 11 – Model Selection and Evaluation</h2>
 
-<h4>🧠 Summary of Learning</h4>
+<h4>Summary of Learning</h4>
 <p>
-This unit covered hyperparameter tuning, cross-validation, and evaluation metrics beyond accuracy (e.g., AUC, F1, Precision/Recall). It introduced MLOps principles such as reproducibility, model deployment, and performance monitoring in production.
+This unit focused on the critical stages of model selection, evaluation, and deployment within the machine learning workflow. Choosing the right model is only the first step—equally important are evaluating its performance and ensuring it is production-ready through MLOps. This week introduced the practical challenges of deploying ML models, including the need for continuous monitoring, retraining, and scalable infrastructure. We also explored how hyperparameter tuning and metric-driven optimisation can drastically improve a model’s reliability and generalisation.
 </p>
 
-<h4>📁 Artefact</h4>
+<h4>Artefact</h4>
 <p>
-Ran `model_Performance_Measurement.ipynb` and compared AUC and R² across multiple model types and parameter settings.  
-<a href="https://github.com/your-username/ml-eportfolio/blob/main/unit11_model_selection.ipynb" target="_blank">View on GitHub</a>
+The Jupyter notebook <code>model_Performance_Measurement.ipynb</code> was used to experiment with key evaluation metrics such as R² and AUC (Area Under the Curve). I modified parameters including learning rate, tree depth, and number of estimators to examine their effects on model generalisation. The artefact provides visual outputs and statistical summaries that illustrate how minor tuning can significantly influence performance metrics.
 </p>
 
-<h4>🪞 Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<h4>Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<p><strong>WHAT:</strong> I learned how to systematically evaluate ML models using metrics suited for both classification (e.g., AUC, precision-recall) and regression (e.g., R², MAE). I also explored how to apply grid search and randomised search for hyperparameter tuning.</p>
+<p><strong>SO WHAT:</strong> This has helped me shift from relying solely on accuracy to a more holistic view of model evaluation. I now understand when to use specific metrics depending on the task (e.g., AUC for imbalanced classification).</p>
+<p><strong>NOW WHAT:</strong> Going forward, I will implement automated pipelines for evaluation and tuning as part of my MLOps approach. This includes monitoring live model performance using versioned models and CI/CD frameworks such as MLflow or SageMaker.</p>
+
+<h4>Collaboration</h4>
 <p>
-<strong>WHAT:</strong> I tuned hyperparameters and monitored impact on key evaluation metrics.<br />
-<strong>SO WHAT:</strong> This helped me see how choice of metric changes model evaluation focus.<br />
-<strong>NOW WHAT:</strong> I aim to build automated evaluation pipelines as part of an MLOps workflow.
+During group discussions, we shared our results from altering model hyperparameters and compared how different optimisation strategies impacted AUC and R². We also explored the ethical implications of deploying underperforming models in real-world scenarios and how MLOps can mitigate such risks through retraining protocols.
 </p>
 
-<h4>🤝 Collaboration</h4>
+<h4>Evidence</h4>
 <p>
-Led a GitHub issue discussion around cross-validation split strategy. Peer-reviewed ROC curve plots and helped clarify misinterpretations.
+GitHub Repository : 
+<a href="https://github.com/Jasim766/jasim766.github.io/blob/main/Unit11_model_Performance_Measurement.ipynb" target="_blank">
+model_Performance_Measurement.ipynb</a> – Includes multiple experiments with regression and classification models, annotated with observations on tuning outcomes and performance changes.
 </p>
 
-<h4>📸 Evidence</h4>
-<p>
-Evaluation score tables, AUC-ROC curve plots, and parameter impact charts added in appendix.
-</p>
-
-<h4>🛠️ Skills & Competencies</h4>
+<h4>Skills & Competencies</h4>
 <ul>
-  <li>Applied hyperparameter tuning and performance monitoring</li>
-  <li>Explored MLOps principles and metric-based model evaluation</li>
+  <li>Hyperparameter tuning using grid and randomised search</li>
+  <li>Evaluation of models using R², AUC, precision, recall, and confusion matrices</li>
+  <li>Understanding and applying MLOps principles for robust deployment</li>
+  <li>Collaborative model analysis and ethical considerations in deployment</li>
 </ul>
 
 <hr />
-
 
 <h2>Unit 12 – Industry 4.0 and Machine Learning</h2>
 
-<h4>🧠 Summary of Learning</h4>
+<h4>Summary of Learning</h4>
 <p>
-This final unit examined the convergence of machine learning with Industry 4.0 trends: digital twins, Edge AI, self-supervised learning, and neural architecture search. It also introduced the vision of Industry 5.0—human-centric and sustainable AI.
+This final unit explored the intersection of emerging machine learning technologies and the ongoing evolution of industrial systems, commonly termed as Industry 4.0. The concept revolves around the integration of intelligent systems, automation, and real-time data into manufacturing and service operations. The discussion extended to Industry 5.0, highlighting the role of human-centric, sustainable innovation.
+</p>
+<p>
+Key technologies such as Self-Supervised Learning (SSL), Edge AI, and Neural Architecture Search (NAS) were introduced as drivers of future intelligent systems. These advances move machine learning beyond traditional models and open new avenues for low-latency, real-time applications in sectors like smart cities, healthcare, autonomous vehicles, and digital manufacturing.
 </p>
 
-<h4>📁 Artefact</h4>
+<h4>Artefact</h4>
 <p>
-Wrote a wiki post discussing the role of Self-Supervised Learning and Edge AI in autonomous manufacturing systems.  
-<a href="https://github.com/your-username/ml-eportfolio/blob/main/unit12_industry4.0_reflection.md" target="_blank">View Wiki Post</a>
+The seminar activity focused on mapping machine learning capabilities to Industry 4.0 frameworks. We discussed real-world case studies where AI-driven automation enhances productivity, reduces human error, and promotes scalability. As part of the formative exercise, we also explored the concept of digital twins—virtual replicas of physical systems—and their reliance on ML for predictive maintenance and decision-making.
 </p>
 
-<h4>🪞 Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<h4>Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<p><strong>WHAT:</strong> I explored the paradigm shift brought about by AI, automation, and smart technologies within industry. I learned about novel ML deployment techniques like Edge AI and their critical role in enabling autonomous decision-making in resource-constrained environments.</p>
+<p><strong>SO WHAT:</strong> This understanding reshaped my perspective on how machine learning isn’t just a tool for data science, but a foundational component of modern infrastructure. The seminar highlighted the urgency for ethical frameworks and sustainability in ML deployment as we progress towards Industry 5.0.</p>
+<p><strong>NOW WHAT:</strong> I intend to delve deeper into real-time ML systems and apply this knowledge to future research or work in areas such as digital twins, AI for IoT, and adaptive learning systems. This unit inspired me to pursue projects that blend algorithmic efficiency with societal value.</p>
+
+<h4>Collaboration</h4>
 <p>
-<strong>WHAT:</strong> Explored how ML is driving automation and AI-driven systems across industries.<br />
-<strong>SO WHAT:</strong> I now see ML not just as a technical skill but a socio-technical force.<br />
-<strong>NOW WHAT:</strong> I aim to explore applications in AI for sustainability, energy efficiency, and smart healthcare.
+Team discussions in this unit revolved around mapping ML concepts onto real industrial use cases. I contributed insights on the role of digital twins in smart manufacturing and participated in debates around balancing automation with human oversight in Industry 5.0.
 </p>
 
-<h4>🤝 Collaboration</h4>
+<h4>Evidence</h4>
 <p>
-Engaged in discussions on the ethical use of autonomous AI. Shared readings on bias in facial recognition and contributed to the digital twin case study.
+Seminar Notes & Reading Reflections (internal submission). Diagrams linking ML workflows with Industry 4.0 components are documented in the team workspace. Additional artefacts will be uploaded as part of the final reflective e-portfolio submission.
 </p>
 
-<h4>📸 Evidence</h4>
-<p>
-Screenshots of wiki contribution and reading annotations included in appendix.
-</p>
-
-<h4>🛠️ Skills & Competencies</h4>
+<h4>Skills & Competencies</h4>
 <ul>
-  <li>Connected ML concepts to industry-wide transformations</li>
-  <li>Reflected on ethical, legal, and social implications of AI</li>
+  <li>Understanding Industry 4.0 and Industry 5.0 ecosystems</li>
+  <li>Knowledge of emerging ML techniques: SSL, Edge AI, NAS</li>
+  <li>Application of ML in real-time, low-latency environments</li>
+  <li>Critical thinking on ethical and sustainable AI deployment</li>
 </ul>
 
 <hr />
+
+
 
       <h4>📚 References</h4>
       <p>[Add APA/Harvard formatted sources used across all units and reflection]</p>
