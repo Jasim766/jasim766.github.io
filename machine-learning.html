@@ -319,119 +319,150 @@ Notebook includes set-based similarity functions, cluster visualisations, and in
 
 <h2>Unit 7 – Introduction to Artificial Neural Networks</h2>
 
-<h4>🧠 Summary of Learning</h4>
-<p>
-We explored the structure and function of ANNs, including perceptrons and activation functions. This unit covered biological inspiration, multilayer structures, and their applications across various domains.
-</p>
+<h4>Summary of Learning</h4>
+<p>This unit introduced the foundational principles of Artificial Neural Networks (ANNs), focusing on how they are inspired by the structure and function of biological neurons. The content bridged neuroscience concepts with computational implementations, leading to a deeper understanding of how learning systems can adapt based on data. ANNs were presented as key components driving automation, personalization, and predictive analytics across industries—from marketing to robotics.</p>
 
-<h4>📁 Artefact</h4>
-<p>
-Built a simple perceptron, AND gate simulation, and a multi-layer perceptron with sigmoid activation using Python.  
-<a href="https://github.com/your-username/ml-eportfolio/blob/main/unit7_ann_intro.ipynb" target="_blank">View on GitHub</a>
-</p>
-
-<h4>🪞 Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
-<p>
-<strong>WHAT:</strong> I simulated neural networks from scratch using NumPy.<br />
-<strong>SO WHAT:</strong> I grasped the role of non-linear activations in enabling expressive learning.<br />
-<strong>NOW WHAT:</strong> I’ll transition to using frameworks like TensorFlow and PyTorch for more scalable ANN implementations.
-</p>
-
-<h4>🤝 Collaboration</h4>
-<p>
-Shared logic gate results and discussed pros/cons of sigmoid vs ReLU. Team peer-reviewed activation function performance.
-</p>
-
-<h4>📸 Evidence</h4>
-<p>
-Logic gate screenshots, weight updates, and loss graphs added to appendix.
-</p>
-
-<h4>🛠️ Skills & Competencies</h4>
+<h4>Key Concepts Covered</h4>
 <ul>
-  <li>Simulated basic ANN models from scratch</li>
-  <li>Understood forward propagation and activations</li>
+  <li>Structure and function of a biological neuron vs. an artificial neuron</li>
+  <li>The architecture of single-layer and multi-layer perceptrons (MLPs)</li>
+  <li>Activation functions such as Sigmoid, ReLU, and Tanh</li>
+  <li>Learning via weight adjustments using gradient descent</li>
+</ul>
+
+<h4>Practical Activities</h4>
+<p>Three Jupyter Notebooks guided the practical exploration of neural networks:</p>
+<ol>
+  <li><code>simple_perceptron.ipynb</code> – Implementation of a basic neuron using step functions</li>
+  <li><code>perceptron_AND_operator.ipynb</code> – A binary logic gate simulation using perceptron logic</li>
+  <li><code>multi-layer_perceptron.ipynb</code> – A hands-on demo of forward pass and activation flow in a multi-layer model with sigmoid activation</li>
+</ol>
+
+<h4>Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<p><strong>WHAT:</strong> I learned the computational mechanics behind how ANNs process inputs and adjust weights to learn patterns. This included the role of activation functions, error correction, and layer depth in model complexity.</p>
+<p><strong>SO WHAT:</strong> The hands-on experience clarified the mathematical foundations of how neural networks converge toward solutions. It also raised awareness of how subtle design choices (like function types or learning rates) influence model performance and interpretability.</p>
+<p><strong>NOW WHAT:</strong> I plan to extend this knowledge by implementing more advanced architectures like CNNs and experimenting with backpropagation in TensorFlow or PyTorch. I also intend to explore how explainable AI (XAI) approaches can address the opacity of deep learning systems.</p>
+
+<h4>Collaboration</h4>
+<p>This week involved peer discussions around neural network limitations, such as overfitting and vanishing gradients. Feedback loops helped troubleshoot early perceptron implementation errors and compare results using different activation strategies.</p>
+
+<h4>Evidence</h4>
+<p>GitHub repository containing all relevant notebooks:</p>
+<ul>
+  <li>
+    <a href="https://github.com/Jasim766/jasim766.github.io/blob/main/Unit07%20Ex1%20simple_perceptron.ipynb" target="_blank">
+      Unit07 Ex1 – Simple Perceptron
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/Jasim766/jasim766.github.io/blob/main/Unit07%20Ex2%20perceptron_AND_operator.ipynb" target="_blank">
+      Unit07 Ex2 – Perceptron AND Operator
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/Jasim766/jasim766.github.io/blob/main/Unit07%20Ex3%20multi-layer%20Perceptron.ipynb" target="_blank">
+      Unit07 Ex3 – Multi-layer Perceptron (Sigmoid)
+    </a>
+  </li>
+</ul>
+
+      
+<h4>Skills & Competencies</h4>
+<ul>
+  <li>Understanding of biological-to-computational neuron mapping</li>
+  <li>Development of perceptron-based models using Python</li>
+  <li>Use of activation functions and weight adjustments</li>
+  <li>Collaboration in debugging and comparing ANN variants</li>
 </ul>
 
 <hr />
+
 
 
 <h2>Unit 8 – Training an Artificial Neural Network</h2>
 
-<h4>🧠 Summary of Learning</h4>
+<h4>Summary of Learning</h4>
 <p>
-We explored training neural networks through backpropagation and weight updates. Key topics included error propagation, gradient descent, and adjusting weights through optimisation.
+This unit built upon the foundational knowledge of Artificial Neural Networks (ANNs) by focusing on how learning occurs within the network. Specifically, it explored the role of error correction and backpropagation, a critical algorithm that fine-tunes network weights by propagating the error backward through the layers. This learning process allows ANNs to become more accurate over time, making them suitable for a wide range of business applications, from predictive analytics to pattern recognition.
 </p>
 
-<h4>📁 Artefact</h4>
+<h4>Artefact</h4>
 <p>
-Extended the MLP implementation from Unit 7 by adding backpropagation, gradient descent visualisation, and ANN error analysis.  
-<a href="https://github.com/your-username/ml-eportfolio/blob/main/unit8_ann_training.ipynb" target="_blank">View on GitHub</a>
+As a practical exercise, I ran the <code>gradient_descent_cost_function.ipynb</code> notebook. This involved visualizing and modifying learning rate and iteration values to observe their influence on the cost function. It clearly demonstrated how model performance improves through iterative weight adjustment, reinforcing the backpropagation concept covered in the lecture.
 </p>
 
-<h4>🪞 Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<h4>Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<p><strong>WHAT:</strong> I learned how backpropagation drives ANN learning by updating weights to minimize prediction error.</p>
+<p><strong>SO WHAT:</strong> This deepened my understanding of how hyperparameters like learning rate and iteration count affect model convergence. It also made clear why tuning these values is essential for stable training.</p>
+<p><strong>NOW WHAT:</strong> Moving forward, I aim to experiment further with network architectures, applying backpropagation to more complex real-world datasets and investigating early stopping and momentum techniques.</p>
+
+<h4>Collaboration</h4>
 <p>
-<strong>WHAT:</strong> Implemented learning through loss minimisation in neural networks.<br />
-<strong>SO WHAT:</strong> Backpropagation revealed how sensitive networks are to hyperparameters.<br />
-<strong>NOW WHAT:</strong> I plan to experiment with learning rate schedules and different optimisers like Adam and RMSprop.
+We discussed the gradient descent cost function results as a team, comparing our learning rate strategies and visual outputs. This exchange helped refine my approach to choosing effective hyperparameter values based on the shape and slope of the cost function graph.
 </p>
 
-<h4>🤝 Collaboration</h4>
-<p>
-We compared different loss functions and learning rates. I helped visualise error convergence across epochs for the group.
-</p>
-
-<h4>📸 Evidence</h4>
-<p>
-Training logs, loss curves, and annotated backpropagation code in appendix.
-</p>
-
-<h4>🛠️ Skills & Competencies</h4>
+<h4>Evidence</h4>
+<p>GitHub repository link to my notebook submission:</p>
 <ul>
-  <li>Applied backpropagation to train neural networks</li>
-  <li>Analysed loss and gradient descent over time</li>
+  <li>
+    <a href="https://github.com/Jasim766/jasim766.github.io/blob/main/Unit08%20Ex4%20gradient_descent_cost_function.ipynb" target="_blank">
+      Unit08 Ex4 – Gradient Descent & Cost Function
+    </a>
+  </li>
+</ul>
+
+<h4>Skills & Competencies</h4>
+<ul>
+  <li>Understanding and implementing backpropagation</li>
+  <li>Hyperparameter tuning for learning rate and iterations</li>
+  <li>Critical evaluation of model convergence through cost function analysis</li>
 </ul>
 
 <hr />
+
 
 
 <h2>Unit 9 – Introduction to Convolutional Neural Networks</h2>
 
-<h4>🧠 Summary of Learning</h4>
+<h4>Summary of Learning</h4>
 <p>
-This unit introduced CNNs, their role in visual recognition, and the architecture of convolutional, pooling, and fully connected layers. We also briefly explored GANs and transformers as emerging deep learning architectures.
+This unit introduced Convolutional Neural Networks (CNNs), a cornerstone of modern computer vision. We explored how CNNs differ from fully connected networks, particularly in their ability to extract spatial features from image data. The unit also discussed more advanced architectures built upon CNNs, including Dueling Networks, GANs, and Transformers. These models have become foundational across various AI domains—from autonomous driving and facial recognition to text generation and image synthesis.
 </p>
 
-<h4>📁 Artefact</h4>
+<h4>Artefact</h4>
 <p>
-Built and tested a basic CNN for digit recognition using a sample image dataset. Modified prediction inputs to observe accuracy.  
-<a href="https://github.com/your-username/ml-eportfolio/blob/main/unit9_cnn_object_recognition.ipynb" target="_blank">View on GitHub</a>
+The core activity involved running a pre-trained CNN model for object recognition using the <code>Convolutional Neural Networks (CNN) - Object Recognition.ipynb</code> notebook. I modified the input image index within the line <code>plt.imshow(x_test[16])</code> to test different predictions and observe the model’s generalisation capabilities. This hands-on task allowed me to visualise how CNN layers process images and make classification decisions.
 </p>
 
-<h4>🪞 Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<h4>Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<p><strong>WHAT:</strong> I learned how convolutional layers, pooling layers, and fully connected layers interact to process image data hierarchically.</p>
+<p><strong>SO WHAT:</strong> Understanding how these networks work at a structural level has helped me demystify how AI can “see” and interpret visuals, with direct implications for fields like healthcare diagnostics, surveillance, and augmented reality.</p>
+<p><strong>NOW WHAT:</strong> I plan to explore transfer learning with CNNs by using pre-trained models such as VGG16 and ResNet, applying them to domain-specific classification problems in upcoming projects.</p>
+
+<h4>Collaboration</h4>
 <p>
-<strong>WHAT:</strong> I trained a CNN using Keras and visualised prediction outputs.<br />
-<strong>SO WHAT:</strong> CNNs significantly outperformed dense networks on image tasks.<br />
-<strong>NOW WHAT:</strong> I plan to explore transfer learning using pre-trained CNNs like VGG16 or ResNet.
+In our group discussion, we compared model prediction outcomes for different test images and debated how input variation affected the network’s accuracy. We also reflected on the ethical implications of CNN-driven technologies, referencing the Wall (2019) article and discussing the societal consequences of facial recognition and surveillance systems.
 </p>
 
-<h4>🤝 Collaboration</h4>
-<p>
-Shared model predictions and discussed accuracy drop for misclassified digits. Peer validation of CNN architecture helped refine final layer choices.
-</p>
-
-<h4>📸 Evidence</h4>
-<p>
-Model accuracy logs, prediction visual, and misclassification samples included in appendix.
-</p>
-
-<h4>🛠️ Skills & Competencies</h4>
+<h4>Evidence</h4>
+<p>GitHub repository link to my notebook submission:</p>
 <ul>
-  <li>Implemented convolutional layers and max pooling in Keras</li>
-  <li>Diagnosed misclassifications through visual error analysis</li>
+  <li>
+    <a href="https://github.com/Jasim766/jasim766.github.io/blob/main/Unit09%20Ex1%20Convolutional%20Neural%20Networks%20(CNN)%20-%20Object%20Recognition.ipynb" target="_blank">
+      Unit09 Ex1 – CNN Object Recognition Notebook
+    </a>
+  </li>
+</ul>
+
+<h4>Skills & Competencies</h4>
+<ul>
+  <li>Hands-on application of CNNs for image classification</li>
+  <li>Model debugging and prediction interpretation</li>
+  <li>Understanding ethical issues in AI-powered vision systems</li>
 </ul>
 
 <hr />
+
 
 
 <h2>Unit 10 – Natural Language Processing (NLP)</h2>
