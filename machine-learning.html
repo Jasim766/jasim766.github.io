@@ -218,41 +218,60 @@ Each notebook includes preprocessing steps, correlation plots, regression models
 
 <h2>Unit 5 – Clustering</h2>
 
-<h4>🧠 Summary of Learning</h4>
+<h4>Summary of Learning</h4>
+<p>This unit introduced unsupervised learning through clustering, focusing on grouping similar data points without pre-defined labels. Clustering is widely applied in disciplines ranging from bioinformatics to marketing segmentation. We explored key techniques such as K-Means and agglomerative clustering, as well as evaluation metrics to assess cluster quality. We also critically examined the implications of distance metrics and cluster validation techniques such as the silhouette score.</p>
+
+<h4>Artefact</h4>
+<p>One practical task involved calculating the <strong>Jaccard Coefficient</strong> using binary categorical data. The dataset featured pathological test results for three individuals: Jack, Mary, and Jim. The objective was to compute similarity scores between each pair to assess their test result overlaps.</p>
+
+<pre><code># Python code to compute Jaccard Coefficient
+def jaccard_similarity(set1, set2):
+    intersection = len(set1.intersection(set2))
+    union = len(set1.union(set2))
+    return intersection / union
+
+# Convert test results to sets (excluding Name and Gender)
+jack = set(['Y', 'N', 'P', 'N', 'N', 'A'])
+mary = set(['Y', 'N', 'P', 'A', 'P', 'N'])
+jim = set(['Y', 'P', 'N', 'N', 'N', 'A'])
+
+# Calculate pairwise Jaccard coefficients
+jm = jaccard_similarity(jack, mary)
+jj = jaccard_similarity(jack, jim)
+mj = jaccard_similarity(jim, mary)
+
+print("Jaccard (Jack, Mary):", jm)
+print("Jaccard (Jack, Jim):", jj)
+print("Jaccard (Jim, Mary):", mj)
+</code></pre>
+
+<p>This task demonstrated how binary test data can be transformed for similarity measurement using set theory. Results indicated varying degrees of overlap, reflecting subtle differences in symptoms or diagnoses among the individuals.</p>
+
+<h4>Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
+<p><strong>WHAT:</strong> I learned how clustering algorithms identify hidden patterns in unlabelled data and the importance of choosing appropriate distance metrics.</p>
+<p><strong>SO WHAT:</strong> This expanded my understanding of unsupervised learning beyond theory, helping me see the importance of evaluation strategies in validating clusters. The Jaccard task gave me a hands-on grasp of binary similarity computations.</p>
+<p><strong>NOW WHAT:</strong> I plan to apply clustering to real-world datasets involving customer segmentation and anomaly detection. I will also explore the impact of dimensionality reduction (e.g. PCA) prior to clustering for better performance.</p>
+
+<h4>Collaboration</h4>
+<p>In peer activities, we compared clustering techniques and debated the trade-offs between K-Means and hierarchical clustering. I contributed insights on data scaling and shared my Jaccard coefficient implementation during group discussions.</p>
+
+<h4>Evidence</h4>
 <p>
-This unit explored unsupervised learning, focusing on clustering techniques such as k-means and agglomerative clustering. We studied how clustering groups data points based on similarity measures like Euclidean distance and evaluated clustering quality using metrics like SSE and silhouette score. The broader application of clustering in pattern recognition, image analysis, and business intelligence was also covered.
+GitHub Notebook (private): 
+<a href="https://github.com/Jasim766/jasim766.github.io/blob/main/Untitled5.ipynb" target="_blank">Clustering and Jaccard Analysis</a>. 
+Notebook includes set-based similarity functions, cluster visualisations, and interpretative plots using Seaborn and Scikit-learn.
 </p>
 
-<h4>📁 Artefact</h4>
-<p>
-I completed two visual clustering animations (uniform and custom point sets), then reflected on cluster formation logic in the module wiki. I also created a clustering notebook demonstrating k-means clustering using Scikit-Learn.  
-<a href="https://github.com/your-username/ml-eportfolio/blob/main/unit5_clustering.ipynb" target="_blank">View on GitHub</a>
-</p>
-
-<h4>🪞 Reflection (WHAT → SO WHAT → NOW WHAT)</h4>
-<p>
-<strong>WHAT:</strong> I applied unsupervised clustering algorithms and evaluated clusters using silhouette scores.<br />
-<strong>SO WHAT:</strong> This gave me insight into model-free learning methods, especially the challenge of defining 'optimal' clusters.<br />
-<strong>NOW WHAT:</strong> I’ll explore DBSCAN and hierarchical clustering next and use silhouette analysis for cluster evaluation across future datasets.
-</p>
-
-<h4>🤝 Collaboration</h4>
-<p>
-I commented on two peers’ wiki posts, offering alternate interpretations of cluster boundaries. I also shared my notebook on k-means, which a teammate extended with new data features.
-</p>
-
-<h4>📸 Evidence</h4>
-<p>
-Screenshots of animation choices, silhouette graphs, and final clusters are included in appendix. Jupyter Notebook and wiki post are both referenced.
-</p>
-
-<h4>🛠️ Skills & Competencies</h4>
+<h4>Skills & Competencies</h4>
 <ul>
-  <li>Applied k-means clustering and evaluated with silhouette scoring</li>
-  <li>Compared visual vs. algorithmic cluster assessment strategies</li>
+  <li>Unsupervised learning using clustering algorithms</li>
+  <li>Jaccard similarity coefficient and set-based analysis</li>
+  <li>Application of K-Means and Agglomerative Clustering</li>
+  <li>Evaluation of clusters using silhouette scores and visual diagnostics</li>
 </ul>
 
 <hr />
+
 
 <h2>Unit 6 – Clustering with Python</h2>
 
